@@ -1,0 +1,100 @@
+
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: #00203fff;
+    --secondary-color:#18e198;
+}
+
+body {
+    min-height: 200vh;
+}
+
+
+
+/* ==================== UTILITIES ====================== */
+
+input {
+    outline:none;
+    border:none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 80px;
+}
+
+/* ==================== TOP BAR ======================= */
+
+
+.top-bar {
+    width:100%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:.6em .8em;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: .4s;
+
+}
+
+
+.top-bar.sticky {
+    padding:.25em .8em;
+}
+
+.brand-logo {
+    font-size:1.5rem;
+    color:#fff;
+    margin-left:1em;
+    letter-spacing: .25em;
+}
+
+
+.left-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+}
+
+
+.left-bar input {
+    padding:.3em .6em;
+    font-size: 1.125rem;
+    border-radius: 0;
+    border-top-left-radius: .2em;
+    border-bottom-left-radius: .2em;
+}
+
+.icon-holder {
+    background:var(--secondary-color);
+    padding:.3em .6em;
+    border-top-right-radius: .2em;
+    border-bottom-right-radius: .2em;
+    cursor: pointer;
+}
+
+.icon-holder .iconify {
+    font-size: 1.125rem;
+    color:#fff;
+}
+
+.left-bar .user-icon {
+    font-size: 2.5rem;
+    margin-left: .3em;
+    color:#fff;
+    transform: translate(0, 5px);
+}
