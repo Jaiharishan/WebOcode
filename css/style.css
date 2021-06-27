@@ -222,6 +222,7 @@ img {
     padding:.5em .5em;
     margin:1em 0;
     border-radius: 1em;
+    cursor: pointer;
     box-shadow: 1px 0 5px var(--shadow-color), 0 1px 5px var(--shadow-color), -1px 0 5px var(--shadow-color), 0 -1px 5px var(--shadow-color) ;
 }
 
@@ -237,13 +238,10 @@ img {
     position: relative;
     width:70%;
     min-width: 120px;
-    /* display: flex;
-    justify-content: center;
-    align-items: stretch; */
 }
 
 
-.live {
+.live, .streamed {
     position: absolute;
     color:#fff;
     padding:.1em .5em;
@@ -253,6 +251,12 @@ img {
     right:3px;
     text-transform: uppercase;
     
+}
+
+.streamed {
+    background: rgb(46, 46, 46);
+    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .video-contents {
@@ -402,6 +406,7 @@ img {
     width:50%;
 }
 
+
 .side-game-img {
     display: flex;
     align-items: center;
@@ -493,7 +498,7 @@ img {
     border-radius: .5em;
 }
 
-.video-img:hover .live {
+.video-img:hover .live, .video-img:hover .streamed {
     z-index: 10;
 }
 
@@ -522,7 +527,7 @@ img {
     border-radius: 50%;
     overflow: hidden;
     vertical-align: center;
-    margin:0 .5em;
+    margin:0 .75em;
     transition: .3s;
     cursor: pointer;
 }
@@ -555,6 +560,6 @@ img {
 
 
 .tournament-logo:hover .tournament-bg {
-    background: rgba(0, 0, 0, 0.404);
+    background: rgba(0, 0, 0, 0.454);
 }
 

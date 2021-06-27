@@ -18,6 +18,7 @@ let gameNews = {
     'dota2':'Nemistice falls and new Power rises, the GameChanger?',
 }
 
+
 let mainGameImgContainer = document.querySelector('.game-img');
 let sideGameImgContainer = document.querySelector('.side-game-imgs');
 
@@ -40,3 +41,21 @@ for (let i = 0; i < sideGameImg.length; i++) {
     })
 }
 
+
+function changeImages() {
+    for (let i = sideGameImg.length - 1; i >= 0; i--) {
+        let childImg = sideGameImg[i].children[0];
+        let mainImg = mainGameImgContainer.querySelector('.main-img');
+        mainGameImgContainer.appendChild(childImg);
+
+        childImg.getElementsByClassName.order = '1';
+        childImg.setAttribute('class', 'main-img');
+        sideGameImg[i].appendChild(mainImg);
+        gameNewsContainer.textContent = gameNews[childImg.id];
+        gameNameContainer.textContent = childImg.id;
+
+    }
+}
+
+
+setInterval(changeImages, 3000);
