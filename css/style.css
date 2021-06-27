@@ -68,6 +68,8 @@ img {
 .regular-text {
     font-size: 1.125rem;
 }
+
+
 /* ==================== TOP BAR ======================= */
 
 
@@ -152,7 +154,6 @@ img {
 .user-details {
     position: absolute;
     display: none;
-    /* display:flex; */
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -193,7 +194,6 @@ img {
 
 .user-info .regular-text {
     text-transform: capitalize;
-    /* font-weight: bolder; */
 }
 
 .user-info:hover {
@@ -253,7 +253,6 @@ img {
 .center-middle {
     margin-left:4.5rem;
     padding:.5em;
-    /* border:1px solid black; */
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     width:100%;
@@ -365,7 +364,8 @@ img {
 
 
 #likes {
-    transition: .3s;
+    transition: .2s;
+    color:#000;
 }
 
 #likes:hover {
@@ -529,9 +529,6 @@ img {
 }
 
 
-/* .section-head .sub-header {
-    font-weight: bolder;
-} */
 
 
 .section-head .regular-text a {
@@ -578,15 +575,6 @@ img {
 .video-img:hover .live, .video-img:hover .streamed {
     z-index: 10;
 }
-
-
-.slide-arrows .iconify {
-    font-size: 2rem;
-    color:var(--primary-color);
-    margin:0 .5em;
-    cursor: pointer;
-}
-
 
 .tournament {
     display: flex;
@@ -673,4 +661,116 @@ footer .iconify {
 
 .credits a {
     margin: 0 .35em;
+}
+
+
+
+/* ================== MEDIA QUERIES ===================== */
+
+
+@media (max-width:1100px) {
+
+
+    .center-middle {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width:90%;
+        align-content: center;
+        justify-content: center;
+        margin:auto;
+    }
+
+    .top-trends {
+        order: 2;
+    }
+
+    .recents-cont {
+        order:1;
+    }
+
+    .top-trends, .recents-cont,.section-container > .center-container > .video-container, .tournament-logo{
+        margin:1em;
+    }
+
+    .section-container > .center-container {
+        flex-wrap: wrap;
+    }
+
+    .recents-cont, .top-trends {
+        margin-left: 4.5rem;
+    }
+}
+
+
+@media (max-width:550px) {
+    .recents-cont {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .side-game-imgs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .side-game-img {
+        max-width: 150px;
+        margin:.5em;
+    }
+
+    .section-container > .center-container > .video-container {
+        max-width: 250px;
+    }
+
+    .game-content .sub-header {
+        width:90%;
+    }
+
+    .big-header {
+        font-size: 1.75rem;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .sub-header {
+        font-size: 1.25rem;
+    }
+
+    .regular-text {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width:450px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-logo {
+        margin:.5em 0;
+    }
+
+    .side-bar {
+        top:95px;
+        height:90vh;
+    }
+
+    .top-trends .video-container {
+        width:100%;
+    }
+
+    .left-bar {
+        width:90%;
+    }
+
+    .left-bar .icon-holder {
+        margin-right: 2.25em;
+    }
 }

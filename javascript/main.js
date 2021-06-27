@@ -62,3 +62,12 @@ setInterval(changeImages, 3000);
 
 
 
+let videoLikesContainer = document.querySelector('.video-likes');
+let spanVideoLikes = document.querySelectorAll('#likes');
+
+
+for (let i = 0; i < spanVideoLikes.length; i++) {
+    spanVideoLikes[i].addEventListener('click', ()=> {
+        spanVideoLikes[i].style.color = '#18e198';
+    })
+}
